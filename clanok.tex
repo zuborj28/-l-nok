@@ -9,109 +9,83 @@
 \usepackage{graphicx}
 \usepackage{url} % príkaz \url na formátovanie URL
 \usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
-
+\usepackage{float}
 \usepackage{cite}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{atbegshi}
 %\usepackage{times}
 
 \pagestyle{headings}
 
-\title{Názov\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2015/16, vedenie: Meno Priezvisko}} % meno a priezvisko vyučujúceho na cvičeniach
+\title{\thanks{}} % meno a priezvisko vyučujúceho na cvičeniach
 
-\author{Meno Priezvisko\\[2pt]
+\author{Jakub Žúbor\\[2pt]
 	{\small Slovenská technická univerzita v Bratislave}\\
 	{\small Fakulta informatiky a informačných technológií}\\
-	{\small \texttt{...@stuba.sk}}
+	{\small \texttt{xzubor@stuba.sk}}
 	}
 
-\date{\small 30. september 2015} % upravte
-
+\date{\small október 2024} % upravte
 
 
 \begin{document}
+\AtBeginShipoutNext{\AtBeginShipoutUpperLeft{
+  \hspace{3cm}\raisebox{-3cm}{\includegraphics[width=4cm]{STU-FIIT-ncv.pdf}}}}
 
 \maketitle
 
 \begin{abstract}
-\ldots
+
+Sociálne siete sa  v posledných rokoch stali populárnejšie ako kedykoľvek predtým. Za nárastom ich popularity stoja aj čoraz sofistikovanejšie algoritmy na zber a spracovanie informácií od užívateľov. Tieto algoritmy vytvárajú pre každého užívateľa jedinečný personalizovaný obsah na základe ich predošlých interakcií. Toto odporúčanie obsahu, ktorý je ušitý každému na mieru, môže viesť k vytvoreniu informačných bublín a podporovaniu rôznych stereotypov a ideológií ku ktorým konzumenti už predtým prejavovali sympatie, čo prispieva k polarizácii spoločnosti. \\
+\\
+V mojej práci sa budem venovať tomu, aké využite majú odporúčacie systémy na sociálnych sieťach, zberu dát a na čo sú tieto dáta využívané veľkými spoločnosťami, ako je napríklad Google, Facebook, Instagram, TikTok alebo X (v minulosti Twitter). Ďalej sa chcem takisto venovať dopadu odporúčacích systémov na spoločnosť a psychickú stránku jednotlivca (potenciál vzniku závislosti na sociálnych sieťach, FOMO – fear of missing out), a stratégiám, ktoré veľké spoločnosti používajú aby si získali a udržali našu pozornosť.\\
+\\
+Bez odporúčacích systémov a algoritmov by sociálne siete nemohli fungovať a tým že aj naďalej narastá ich popularita sa odporúčacie systémy za pomoci AI a strojového učenia viac a viac zdokonaľujú a dopad odporúčacích systémov bude naďalej rásť.
+
 \end{abstract}
 
 
 
 \section{Úvod}
 
-Motivujte čitateľa a vysvetlite, o čom píšete. Úvod sa väčšinou nedelí na časti.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{diagram2.pdf}
+        \caption{Obrázok 1}
+        \label{fig:obrazok1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{diagram2.pdf}
+        \caption{Obrázok 2}
+        \label{fig:obrazok2}
+    \end{subfigure}
+    \caption{Dva obrázky vedľa seba}
+    \label{fig:obrazky-vedla-seba}
+\end{figure}
 
-Uveďte explicitne štruktúru článku. Tu je nejaký príklad.
-Základný problém, ktorý bol naznačený v úvode, je podrobnejšie vysvetlený v časti~\ref{nejaka}.
-Dôležité súvislosti sú uvedené v častiach~\ref{dolezita} a~\ref{dolezitejsia}.
-Záverečné poznámky prináša časť~\ref{zaver}.
+\begin{multicols}{2}
 
+\begin{figure}[H]
+      \centering
+      \includegraphics[width= 2\linewidth]{diagram2.pdf}
+      \caption{Obrázok na celú šírku}
+      \label{fig:obrazok1}
+\end{figure}
 
-
-\section{Nejaká časť} \label{nejaka}
-
-Z obr.~\ref{f:rozhod} je všetko jasné. 
-
-\begin{figure*}[tbh]
-\centering
-%\includegraphics[scale=1.0]{diagram.pdf}
-Aj text môže byť prezentovaný ako obrázok. Stane sa z neho označný plávajúci objekt. Po vytvorení diagramu zrušte znak \texttt{\%} pred príkazom \verb|\includegraphics| označte tento riadok ako komentár (tiež pomocou znaku \texttt{\%}).
-\caption{Rozhodujúci argument.}
-\label{f:rozhod}
-\end{figure*}
-
-
+\end{multicols}
 
 \section{Iná časť} \label{ina}
 
-Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{ina:nejake}), a potom na ešte nejaké (časť~\ref{ina:nejake}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
 
 Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
 
 
-\subsection{Nejaké vysvetlenie} \label{ina:nejake}
 
-Niekedy treba uviesť zoznam:
-
-\begin{itemize}
-\item jedna vec
-\item druhá vec
-	\begin{itemize}
-	\item x
-	\item y
-	\end{itemize}
-\end{itemize}
-
-Ten istý zoznam, len číslovaný:
-
-\begin{enumerate}
-\item jedna vec
-\item druhá vec
-	\begin{enumerate}
-	\item x
-	\item y
-	\end{enumerate}
-\end{enumerate}
-
-
-\subsection{Ešte nejaké vysvetlenie} \label{ina:este}
-
-\paragraph{Veľmi dôležitá poznámka.}
-Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom.
-
-
-
-\section{Dôležitá časť} \label{dolezita}
-
-
-
-
-\section{Ešte dôležitejšia časť} \label{dolezitejsia}
-
-
-
-
-\section{Záver} \label{zaver} % prípadne iný variant názvu
 
 
 
